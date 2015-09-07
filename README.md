@@ -1,34 +1,41 @@
-### Basic Yelp client
+### Basic Yelp
+assignment 2 - week 2
 
-This is a headless example of how to implement an OAuth 1.0a Yelp API client. The Yelp API provides an application token that allows applications to make unauthenticated requests to their search API.
+Time spent: Unknown - At least 12 hours. It takes me so long for this. I desired to implement the get direction feature but there is no time left for me. :(
 
-### Next steps
+Completed user stories:
+Search results page
 
-- Check out `BusinessesViewController.swift` to see how to use the `Business` model.
+- [x] Table rows should be dynamic height according to the content height.
 
-### Sample request
+- [x] Custom cells should have the proper Auto Layout constraints.
 
-**Basic search with query**
+- [x] Search bar should be in the navigation bar (doesn't have to expand to show location like the real Yelp app does).
 
-```
-Business.searchWithTerm("Thai", completion: { (businesses: [Business]!, error: NSError!) -> Void in
-    self.businesses = businesses
-    
-    for business in businesses {
-        println(business.name!)
-        println(business.address!)
-    }
-})
-```
+- [x] Hint: This is just a UISearchBar that is set as the navigationItem.titleView
 
-**Advanced search with categories, sort, and deal filters**
+- [x] Optional: Infinite scroll for restaurant results
 
-```
-Business.searchWithTerm("Restaurants", sort: .Distance, categories: ["asianfusion", "burgers"], deals: true) { (businesses: [Business]!, error: NSError!) -> Void in
+- [ ] Optional: Implement map view of restaurant results
 
-    for business in businesses {
-        println(business.name!)
-        println(business.address!)
-    }
-}
-```
+Filter page. Unfortunately, not all the filters in the real Yelp App, are supported in the Yelp API.
+
+- [x] The filters you should actually have are: category, sort (best match, distance, highest rated), radius (meters), deals (on/off).
+
+- [x] The filters table should be organized into sections as in the mock.
+
+- [x] You can use the default UISwitch for on/off states. Optional: implement a custom switch
+
+- [x] Clicking on the “Search” button should dismiss the filters page and trigger the search w/ the new filter settings.
+
+- [x] Optional: Radius filter should expand as in the real Yelp app
+
+- [x] Optional: Categories should show a subset of the full list with a “See All” row to expand. A formatted list of categories available in the Public API can be found here
+
+- [ ] Optional: Implement the restaurant detail page.
+
+Walkthrough of all user stories:
+
+![Video Walkthrough](yelp.gif)
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
