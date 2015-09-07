@@ -36,6 +36,6 @@ Filter page. Unfortunately, not all the filters in the real Yelp App, are suppor
 
 Walkthrough of all user stories:
 
-![Video Walkthrough](yelp.gif)
+![Video Walkthrough](Yelp.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
